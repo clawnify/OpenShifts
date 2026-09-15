@@ -1,0 +1,28 @@
+{
+  "source_revision": "pre-initial-commit",
+  "captured": "2026-09-15",
+  "screenshots": [
+    {
+      "id": "schedule-light",
+      "file": "screenshots/schedule-light.png",
+      "route": "/schedule",
+      "theme": "light",
+      "width": 1920,
+      "height": 936,
+      "alt": "The OpenShifts week grid in light theme: people down the side, days across the top, an open-shifts row, and conflict warnings drawn on the cells that cause them."
+    },
+    {
+      "id": "schedule-dark",
+      "file": "screenshots/schedule-dark.png",
+      "route": "/schedule",
+      "theme": "dark",
+      "width": 1920,
+      "height": 936,
+      "alt": "The same OpenShifts week grid in dark theme."
+    }
+  ],
+  "cover": {
+    "light": "schedule-light",
+    "dark": "schedule-dark"
+  }
+}

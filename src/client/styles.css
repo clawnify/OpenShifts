@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+/* The platform design system's tokens, verbatim. Every value a component uses
+   resolves through here, so a rebrand is this file and nothing else. No
+   component below this file names a colour, a font or a pixel radius.
+
+   The second half of each block aliases the shadcn primitive names onto the
+   same values. That is how the copied primitives get restyled without forking
+   them: `bg-background` and `text-muted-foreground` resolve to our tokens. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-text: var(--accent-text);
+  --color-info: var(--info);
+  --color-info-tint: var(--info-tint);
+  --color-info-solid: var(--info-solid);
+  --color-success: var(--success);
+  --color-success-tint: var(--success-tint);
+  --color-success-solid: var(--success-solid);
+  --color-warning: var(--warning);
+  --color-warning-tint: var(--warning-tint);
+  --color-warning-solid: var(--warning-solid);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+  --color-danger-solid: var(--danger-solid);
+
+  /* shadcn's vocabulary, pointed at ours. */
+  --color-popover: var(--surface);
+  --color-popover-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted);
+  --color-primary-foreground: var(--on-primary);
+  --color-secondary: var(--sunken);
+  --color-secondary-foreground: var(--foreground);
+  --color-accent-foreground: var(--accent-text);
+  --color-destructive: var(--danger-tint);
+  --color-destructive-foreground: var(--danger);
+  --color-input: var(--border);
+
+  /* Atoms 4px, controls 8px, cards and popovers 12px, modals 16px, hero 24px. */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+:root {
+  --background: #ffffff;
+  --surface: #ffffff;
+  --sunken: #f7f7f5;
+  --foreground: #1b1a19;
+  --muted: #646360;
+  --faint: #9a9893;
+  --border: #e5e3de;
+  --ring: #df3656;
+  --primary: #1b1a19; /* the one ink action per screen */
+  --primary-hover: #333130;
+  --on-primary: #ffffff;
+  --accent: #df3656;
+  --accent-hover: #bd2c47;
+  --accent-tint: #f9eded;
+  --accent-text: #892f3b;
+  --info: #173ec4;
+  --info-tint: #ecf0f9;
+  --info-solid: #4977ed;
+  --success: #2b5f3c;
+  --success-tint: #dbf9e2;
+  --success-solid: #319656;
+  --warning: #664e27;
+  --warning-tint: #f9efdf;
+  --warning-solid: #a3772b;
+  --danger: #8a2f2d;
+  --danger-tint: #f9edec;
+  --danger-solid: #e1363a;
+}
+
+/* Tailwind v4 hoists and merges every @theme block and drops the media
+   condition, so the dark values live in a plain :root rule instead. Nesting
+   @theme here would ship the app dark for everyone, silently. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100f0e;
+    --surface: #161615;
+    --sunken: #222120;
+    --foreground: #efeeed;
+    --muted: #c0bdb9;
+    --faint: #82807c;
+    --border: #2e2e2c;
+    --ring: #e4415d;
+    --primary: #efeeed;
+    --primary-hover: #d6d4d1;
+    --on-primary: #100f0e;
+    --accent: #e4415d;
+    --accent-hover: #ef7d87;
+    --accent-tint: #3b1c1e;
+    --accent-text: #e6b6b8;
+    --info: #b5c4e5;
+    --info-tint: #12234f;
+    --info-solid: #5580e8;
+    --success: #86da9e;
+    --success-tint: #1a2b1f;
+    --success-solid: #3c9c5d;
+    --warning: #e5bd7e;
+    --warning-tint: #2d2518;
+    --warning-solid: #a87e35;
+    --danger: #e6b7b2;
+    --danger-tint: #3b1c1a;
+    --danger-solid: #e64243;
+  }
+}
+
+html,
+body,
+#app {
+  height: 100dvh;
+}
+html { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Signature 1: hierarchy is a 1px inset ring, never a painted border and never
+   a resting drop shadow. */
+@utility card {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+/* Raised: the secondary button and the active segment. Crisper than a 1px line
+   at 28px, and it costs no layout. */
+@utility raised {
+  box-shadow: 0 0 2px rgb(28 40 64 / 0.18), 0 1px 3px rgb(0 0 0 / 0.04);
+}
+
+/* Floating: things that leave the page. A hairline ring plus two soft drops. */
+@utility floating {
+  box-shadow:
+    0 0 0 1px rgb(28 40 64 / 0.04),
+    0 4px 8px -4px rgb(28 40 64 / 0.12),
+    0 4px 12px -2px rgb(24 41 75 / 0.16);
+}
+
+/* Signature 4: digits and totals stack. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* iOS zooms any input under 16px on focus, which throws the whole grid off. */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Agent mode: nothing is reachable only by hovering, and targets grow. */
+:root[data-agent] .hover-only {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+:root[data-agent] button,
+:root[data-agent] [role="button"] {
+  min-height: 2.75rem;
+}

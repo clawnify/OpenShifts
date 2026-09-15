@@ -1,0 +1,80 @@
+{
+  "$schema": "https://app.clawnify.com/schema/v1/clawnify.json",
+  "version": 1,
+  "name": "OpenShifts",
+  "description": "Employee scheduling, time tracking, availability, time off and shift swaps for shift teams: restaurants, cafes, hotels, retail floors, care homes, warehouses and production lines. Build the week, check it against everyone's availability and the rest rule, see what it costs before you commit, and publish it. Once a week is published every change is recorded with who made it and how much notice people got, and the team reads that on the same page as the rota. Like Shiftbase, Deputy, When I Work, 7shifts, Homebase, Planday or Sling.",
+  "icon": "icon.svg",
+  "tags": [
+    "scheduling",
+    "rota",
+    "shifts",
+    "time-tracking",
+    "workforce"
+  ],
+  "app": {
+    "framework": "react+hono",
+    "database": true,
+    "storage": false
+  },
+  "deploy": {
+    "title": "Deploy your shift scheduler",
+    "subtitle": "A rota your team can rely on, running on your own database in minutes",
+    "prompts": [
+      {
+        "key": "business_type",
+        "label": "What kind of business is this?",
+        "placeholder": "e.g. Cafe, hotel, care home, warehouse, retail store",
+        "required": true
+      },
+      {
+        "key": "company_name",
+        "label": "Business name",
+        "placeholder": "e.g. The Harbour Cafe",
+        "required": true
+      },
+      {
+        "key": "roles",
+        "label": "What jobs do people work?",
+        "type": "textarea",
+        "placeholder": "e.g. Barista, kitchen, front of house, night porter, supervisor"
+      },
+      {
+        "key": "opening_hours",
+        "label": "When are you open?",
+        "type": "textarea",
+        "placeholder": "e.g. Mon-Fri 07:00-18:00, Sat-Sun 08:00-16:00. Say if you run nights."
+      },
+      {
+        "key": "rules",
+        "label": "Any scheduling rules to enforce?",
+        "type": "textarea",
+        "placeholder": "e.g. 11 hours off between shifts, overtime after 40h at 1.5x, currency GBP"
+      },
+      {
+        "key": "details",
+        "label": "Anything else?",
+        "type": "textarea",
+        "placeholder": "Team names and pay rates, brand colour, whether staff should see the change log..."
+      }
+    ]
+  },
+  "api": {
+    "public_routes": [
+      {
+        "path": "/s/**",
+        "methods": [
+          "GET"
+        ]
+      }
+    ],
+    "server_routes": [
+      "/s/*"
+    ]
+  },
+  "template": {
+    "displayName": "OpenShifts",
+    "category": "Operations",
+    "enabled": true
+  },
+  "agent": "agent.md"
+}

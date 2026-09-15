@@ -1,0 +1,21 @@
+name = "open-shifts"
+main = "src/server/index.ts"
+compatibility_date = "2026-04-15"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+# The staff schedule page is served by the Worker, not by the SPA fallback.
+# The deployed build DROPS this file and reads api.server_routes from
+# clawnify.json instead, so the two lists have to stay in step. This one only
+# makes `wrangler dev` behave like production; it proves nothing about production.
+# One star here, two in clawnify.json's public_routes, and that is not a typo:
+# the perimeter matcher needs `**` to cross a slash, run_worker_first does not.
+run_worker_first = ["/api/*", "/llms.txt", "/s/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "open-shifts-db"
+database_id = "local"

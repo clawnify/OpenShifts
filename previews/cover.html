@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: Inter, sans-serif; }
+  .cover { width:1280px; height:720px; position:relative; overflow:hidden; display:flex; flex-direction:column; }
+  .light { background:#F7F7F5; color:#1B1A19; }
+  .dark  { background:#100F0E; color:#EFEEED; }
+  .head { padding:56px 64px 0; display:flex; align-items:center; gap:18px; }
+  .icon { width:56px; height:56px; border-radius:12px; flex:none; }
+  h1 { font-size:40px; font-weight:600; letter-spacing:-0.02em; line-height:1; }
+  .tag { margin-top:14px; font-size:19px; line-height:1.45; max-width:760px; }
+  .light .tag { color:#646360; }
+  .dark  .tag { color:#C0BDB9; }
+  .tag b { font-weight:600; }
+  .light .tag b { color:#1B1A19; }
+  .dark  .tag b { color:#EFEEED; }
+  .body { padding:0 64px; margin-top:28px; }
+  .shot { width:100%; border-radius:14px 14px 0 0; display:block;
+          box-shadow:0 0 0 1px rgba(28,40,64,.10), 0 24px 48px -16px rgba(28,40,64,.28); }
+  .dark .shot { box-shadow:0 0 0 1px rgba(255,255,255,.08); }
+  .crop { height:456px; overflow:hidden; border-radius:14px 14px 0 0; }
+</style></head>
+<body>
+<div class="cover" id="c">
+  <div class="head">
+    <img class="icon" src="../icon.svg" alt="">
+    <div>
+      <h1>OpenShifts</h1>
+    </div>
+  </div>
+  <div class="body">
+    <p class="tag">Scheduling, time tracking and shift swaps for shift teams. <b>A published week is a promise:</b> every change after it goes out is recorded, with who made it and how much notice people got.</p>
+    <div class="crop" style="margin-top:28px"><img class="shot" id="s" src="../screenshots/schedule-light.png" alt=""></div>
+  </div>
+</div>
+<script>
+  const p = new URLSearchParams(location.search);
+  if (p.get('theme') === 'dark') {
+    document.getElementById('c').className = 'cover dark';
+    document.getElementById('s').src = '../screenshots/schedule-dark.png';
+  } else {
+    document.getElementById('c').className = 'cover light';
+  }
+</script>
+</body></html>
