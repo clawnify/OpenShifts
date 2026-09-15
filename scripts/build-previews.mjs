@@ -67,10 +67,10 @@ const coverStyles = `
 .cover.dark .hero-copy p{color:#b0a8a6}
 .cover.dark .hero-meta{color:#c69ba0}
 .cover.dark .frame{box-shadow:0 0 0 1px #3a3331,0 30px 70px -30px #0009}
-.cover.dark .mini{background:#1d1a19;color:#efeeed;box-shadow:0 0 0 1px #332d2c,0 20px 35px -18px #0009}
-.cover.dark .mini .k{color:#a9a3a0}
-.cover.dark .pill.grey{background:#2c2725;color:#c4bcb9}
-.cover.dark .pill.amber{background:#2f2718;color:#e2bd7c}
+.cover.dark .ui{background:#1d1a19;color:#efeeed;box-shadow:0 0 0 1px #332d2c,0 20px 35px -18px #0009}
+.cover.dark .k,.cover.dark .muted{color:#a9a3a0}
+.cover.dark .badge.grey{background:#2c2725;color:#c4bcb9}
+.cover.dark .badge.amber{background:#2f2718;color:#e2bd7c}
 `;
 
 const outputs = [];

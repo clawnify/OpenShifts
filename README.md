@@ -17,31 +17,32 @@ shows that record to the team on the same page as the rota.
 
 [![Deploy with Clawnify](https://app.clawnify.com/badge/deploy.svg)](https://app.clawnify.com/deploy?repo=clawnify/OpenShifts)
 
-## What it does
+## See it in action
 
-<img src="previews/publish.png" alt="A published week, the count of changes since, and one change entry naming who made it and the notice it carried" width="100%">
+Conceptual UI illustrations of the app's main capabilities, with fictional
+example data. Open an image to see the details.
 
-**Publishing is the promise.** The week goes out, and from that moment every edit
-writes a record carrying who made it and how many hours of notice the shift had.
-The team reads that record on their own page, beside the rota.
+| Publishing | Conflicts |
+| --- | --- |
+| [![Publishing a week, and the record it starts](previews/publish.png)](previews/publish.png) | [![A shift dragged onto a day the person cannot work](previews/conflicts.png)](previews/conflicts.png) |
+| **Shift swaps** | **Labour cost** |
+| [![A swap approved, with a name and a time on every step](previews/swaps.png)](previews/swaps.png) | [![The week's wage cost against its budget](previews/cost.png)](previews/cost.png) |
 
-<img src="previews/conflicts.png" alt="A stated availability window, a blocked assignment, and a seven-hour rest gap against an eleven-hour rule" width="100%">
+**Publishing is the promise.** The week goes out, and from that moment every
+edit writes a record carrying who made it and how many hours of notice the shift
+had. The team reads that record on their own page, beside the rota.
 
-**Conflicts surface as you assign, not after.** Stated availability, approved
-leave, double bookings and short rest are checked at the moment you put someone
-on a shift. An eleven-hour rest rule catches a close followed by an open.
-
-<img src="previews/swaps.png" alt="A shift offered up, claimed by someone else, and approved, each with a name and a timestamp" width="100%">
+**Conflicts surface as you assign.** Stated availability, approved leave, double
+bookings and short rest are checked at the moment you put someone on a shift. An
+eleven-hour rest rule catches a close followed by an open.
 
 **A swap is a decision, not a message.** Who gave the shift up, who took it, who
 said yes, and when. Approving it moves the shift and writes the move into the
-week’s record.
+week's record.
 
-<img src="previews/cost.png" alt="Scheduled hours, the week’s wage cost against a budget, and the overtime threshold" width="100%">
-
-**The wage bill before you commit.** Hours and cost for the week against a budget
-you set, with overtime past your own threshold. On the free tier, because that
-total is why the spreadsheets survive.
+**The wage bill before you commit.** Hours and cost for the week against a
+budget you set, with overtime past your own threshold. On the free tier, because
+that total is why the spreadsheets survive.
 
 ## Everything else
 
