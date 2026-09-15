@@ -6,7 +6,11 @@
     "dev": "wrangler d1 execute open-shifts-db --local --file=schema.sql && concurrently -n ui,api -c cyan,green \"vite\" \"wrangler dev --port 8793\"",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "previews:build": "node scripts/build-previews.mjs build",
+    "previews:import": "node scripts/build-previews.mjs import",
+    "previews:check": "node scripts/build-previews.mjs check",
+    "previews:export": "node scripts/build-previews.mjs export"
   },
   "dependencies": {
     "@clawnify/app": "^0.2.1",

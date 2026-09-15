@@ -1,0 +1,30 @@
+[
+  {
+    "src": "previews/publish.png",
+    "alt": "Conceptual floating week ready to publish, with a slightly overlapping panel listing a change made after publishing and the notice it carried.",
+    "caption": "A published week is a promise.",
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "src": "previews/conflicts.png",
+    "alt": "Conceptual floating shift assignment showing an availability conflict, with an overlapping panel of what that person said they could not work.",
+    "caption": "Caught before it goes out.",
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "src": "previews/swaps.png",
+    "alt": "Conceptual floating shift swap awaiting approval, with an overlapping panel showing when it was offered up and when it was claimed.",
+    "caption": "Every swap leaves a trail.",
+    "width": 1600,
+    "height": 1000
+  },
+  {
+    "src": "previews/cost.png",
+    "alt": "Conceptual floating weekly wage total against a budget with a per-person breakdown, and an overlapping panel showing the overtime rule.",
+    "caption": "Know the wage bill before you commit.",
+    "width": 1600,
+    "height": 1000
+  }
+]

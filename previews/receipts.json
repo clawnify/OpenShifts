@@ -1,0 +1,26 @@
+{
+  "cover-dark": {
+    "composition": "d5d37c2d89cc279f69be10148b4eb6eadbf42dbcb3e53f421878ec0ec1421800",
+    "png": "b264429dd6419d35584a53983b8865963be2e583b9599b9e646d8b8d82c8c234"
+  },
+  "cover-light": {
+    "composition": "dcc0541e39392d030c77eb84e032b322aa987504f27ceca89c6f65e12502a16c",
+    "png": "7dc2af8b56a7d5f4a823d6add68fe63f43af4eeeec301b4363b16b0baa221466"
+  },
+  "publish": {
+    "composition": "3e8c03d25b3a1c6effa97e562675d6ddd72ec84ff7cc7f1ee332ebbf03b69365",
+    "png": "f45c17b34b1b209b6e1249d1b450683ce8dce6142a6f0109d87829f3c8d4d109"
+  },
+  "conflicts": {
+    "composition": "f6f96fbe607437c1321fbc1f1525438ade642dfb038a1b21fc03d4a9423b66bc",
+    "png": "6e6be6aa6c9f1dbd4946581da568244fcbdd8207316e6a838b652952de5eb3f0"
+  },
+  "swaps": {
+    "composition": "0e5a6a5672955e8033b27bf6ae9a7734054414ae13440f2790f973b729d30db7",
+    "png": "8d0d64427f5bbce315fd5a8f6020bdb8ca29b196b4448b789f09ad4c3bd05f5d"
+  },
+  "cost": {
+    "composition": "62d11b49ab06ffb503508a3e207396bbdc397d32698de8998b61fabb4f9a4ea1",
+    "png": "131f1a534f497391d2d391fed515fe4c0d36b426f4e361fc0795694f02eef027"
+  }
+}

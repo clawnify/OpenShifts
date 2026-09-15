@@ -1,28 +1,82 @@
 {
-  "source_revision": "pre-initial-commit",
-  "captured": "2026-09-15",
+  "version": 1,
+  "app": "OpenShifts",
+  "repo": "clawnify/OpenShifts",
+  "capturedAt": "2026-09-15",
+  "sourceBaseCommit": "1f6ece0c6e7a46ce6432d02aab3f77766734c619",
+  "captureNotes": "Real TaskWindow captures of the running app on a separate local database with fictional data (The Harbour Cafe). The dark capture activates the app's own prefers-color-scheme rule through CSSOM; no UI content is substituted. Desktop capture is a 1440x960 emulated viewport.",
   "screenshots": [
     {
-      "id": "schedule-light",
-      "file": "screenshots/schedule-light.png",
+      "id": "schedule",
+      "src": "screenshots/schedule.png",
+      "title": "The published week",
+      "alt": "A Monday-to-Sunday shift grid with people down the side, an open-shifts row, and conflict warnings drawn on the cells that cause them.",
       "route": "/schedule",
       "theme": "light",
-      "width": 1920,
-      "height": 936,
-      "alt": "The OpenShifts week grid in light theme: people down the side, days across the top, an open-shifts row, and conflict warnings drawn on the cells that cause them."
+      "width": 1440,
+      "height": 960,
+      "viewport": { "width": 1440, "height": 960 }
     },
     {
       "id": "schedule-dark",
-      "file": "screenshots/schedule-dark.png",
+      "src": "screenshots/schedule-dark.png",
+      "title": "The published week - Dark",
+      "alt": "The same Monday-to-Sunday shift grid in the app's dark theme.",
       "route": "/schedule",
       "theme": "dark",
-      "width": 1920,
-      "height": 936,
-      "alt": "The same OpenShifts week grid in dark theme."
+      "width": 1440,
+      "height": 960,
+      "viewport": { "width": 1440, "height": 960 }
     }
   ],
   "cover": {
-    "light": "schedule-light",
-    "dark": "schedule-dark"
-  }
+    "light": "schedule",
+    "dark": "schedule-dark",
+    "title": "OpenShifts",
+    "subtitle": "Scheduling, time tracking and shift swaps for teams that work shifts.",
+    "headline": "A published week\nis a promise."
+  },
+  "features": [
+    {
+      "id": "publish",
+      "title": "A published week\nis a promise.",
+      "subtitle": "Publish the week. Every change after that is recorded, with who made it and how much notice people got.",
+      "eyebrow": "01 / PUBLISHING",
+      "background": "#f4efee",
+      "alt": "Conceptual floating week ready to publish, with a slightly overlapping panel listing a change made after publishing and the notice it carried.",
+      "sources": ["src/client/components/schedule.tsx", "src/server/week.ts"],
+      "kind": "conceptual-ui"
+    },
+    {
+      "id": "conflicts",
+      "title": "Caught before\nit goes out.",
+      "subtitle": "Stated availability, approved leave, double bookings and short rest are checked as you assign, not after.",
+      "eyebrow": "02 / CONFLICTS",
+      "background": "#f5f1e9",
+      "alt": "Conceptual floating shift assignment showing an availability conflict, with an overlapping panel of what that person said they could not work.",
+      "sources": ["src/server/schedule.ts", "src/client/components/team.tsx"],
+      "kind": "conceptual-ui"
+    },
+    {
+      "id": "swaps",
+      "title": "Every swap\nleaves a trail.",
+      "subtitle": "Who gave the shift up, who took it, and who said yes. A decision with a name and a time on it.",
+      "eyebrow": "03 / SWAPS",
+      "background": "#eef0f6",
+      "alt": "Conceptual floating shift swap awaiting approval, with an overlapping panel showing when it was offered up and when it was claimed.",
+      "sources": ["src/client/components/requests.tsx", "src/server/routes/requests.ts"],
+      "kind": "conceptual-ui"
+    },
+    {
+      "id": "cost",
+      "title": "Know the wage bill\nbefore you commit.",
+      "subtitle": "Hours and cost for the week against the budget you set, with overtime past your own threshold.",
+      "eyebrow": "04 / LABOUR COST",
+      "background": "#edf2ee",
+      "alt": "Conceptual floating weekly wage total against a budget with a per-person breakdown, and an overlapping panel showing the overtime rule.",
+      "sources": ["src/server/schedule.ts", "src/client/components/insights.tsx"],
+      "kind": "conceptual-ui"
+    }
+  ],
+  "carousel": ["publish", "conflicts", "swaps", "cost"]
 }
