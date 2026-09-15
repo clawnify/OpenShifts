@@ -15,7 +15,7 @@ quietly change underneath the people working it. This one records every edit mad
 after a week is published, with who made it and how much notice it carried, and
 shows that record to the team on the same page as the rota.
 
-[![Deploy with Clawnify](https://app.clawnify.com/badge/deploy.svg)](https://app.clawnify.com/deploy?repo=clawnify/OpenShifts)
+[![Deploy with Clawnify](https://app.clawnify.com/deploy-button.svg)](https://app.clawnify.com/deploy?repo=clawnify/OpenShifts)
 
 ## See it in action
 
