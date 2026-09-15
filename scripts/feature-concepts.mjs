@@ -44,6 +44,11 @@ const CURSORS = {
     <path d="M3.2 2.1 19.4 12.4l-7.05 1.16 3.86 8.06-3.2 1.53-3.86-8.06-4.35 4.62z"
       fill="#ffffff" stroke="#1b1a19" stroke-width="1.7" stroke-linejoin="round"/>
   </svg>`,
+  // Typing: the I-beam, hotspot at its centre.
+  text: `<svg width="26" height="54" viewBox="0 0 12 25">
+    <path d="M3 2.4h6M6 2.4v20.2M3 22.6h6" fill="none" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+    <path d="M3 2.4h6M6 2.4v20.2M3 22.6h6" fill="none" stroke="#1b1a19" stroke-width="2" stroke-linecap="round"/>
+  </svg>`,
   // Dragging: the closed hand, mid-grip.
   grabbing: `<svg width="52" height="54" viewBox="0 0 24 25">
     <path d="M5 12.4c0-1.1 1-1.9 2-1.6l.9.3V8.3a1.6 1.6 0 0 1 3.2 0v-.6a1.6 1.6 0 0 1 3.2 0v.8a1.6 1.6 0 0 1 3.2 0v6a5.9 5.9 0 0 1-5.9 5.9h-1.1c-2.7 0-4.7-1.4-5.8-3.8l-1.3-3a2 2 0 0 1-.4-1.2z"
@@ -152,8 +157,6 @@ export const conceptStyles = `
 .swaps .trail:last-child:after{display:none}
 .swaps .trail strong{display:block;font-size:21px;font-weight:550}
 .swaps .trail span{color:#8f8a87;font-size:17px}
-.swaps .cursor{left:846px;top:582px}
-.swaps .press{left:810px;top:546px}
 
 /* 04 Labour cost */
 .cost .main{left:668px;top:184px;width:744px;transform:rotate(-2.4deg)}
@@ -162,6 +165,7 @@ export const conceptStyles = `
 .cost .bar{height:12px;border-radius:7px;background:#f0edec;margin:26px 0 12px;overflow:hidden}
 .cost .bar span{display:block;height:100%;border-radius:7px;background:#4b8f66}
 .cost .budget{display:flex;align-items:center;gap:18px;margin-top:28px;padding-top:26px;border-top:1px solid #f1eeec}
+.cost .cursor{left:996px;top:516px}
 .cost .aside{left:988px;top:660px;width:488px;transform:rotate(2.6deg);z-index:30}
 .cost .line{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-top:1px solid #f4f1f0;font-size:21px}
 .cost .line:first-of-type{border-top:0}
@@ -231,7 +235,6 @@ const concepts = {
       <div class="reason">“Can’t make Saturday evening — Sam has offered to take it.”</div>
       <div class="acts"><span class="btn ink down">${icon('check', 22)}Approve</span><span class="btn quiet">Decline</span></div>
     </section>
-    ${press()}${cursor()}
     <section class="ui aside" aria-label="Conceptual swap trail">
       <div class="k">The trail</div>
       <div class="trail"><strong>Offered up</strong><span>Alex Moss · Tue 09:12</span></div>
@@ -247,9 +250,10 @@ const concepts = {
       <div class="between"><span class="muted small tnum">£318 left</span><span class="muted small tnum">77% of budget</span></div>
       <div class="budget">
         <span class="k" style="flex-shrink:0">Week budget</span>
-        <span class="field tnum" style="min-width:220px">£1,400</span>
+        <span class="field active tnum" style="min-width:220px"><span>£1,400</span><span class="caret"></span></span>
       </div>
     </section>
+    ${cursor('text')}
     <section class="ui aside" aria-label="Conceptual per-person cost lines">
       <div class="k">Where it goes</div>
       <div style="margin-top:14px">

@@ -1,26 +1,26 @@
 {
   "cover-dark": {
-    "composition": "f4d7d37901606f51fd37e2a46b99507dc7c3fb5ac311b5e7a4bd6148f3b059d7",
+    "composition": "89ca06d14de05e190959b370eea31e2c07c338541dc5bea3760624364e4d57c2",
     "png": "5a1b8c10d4a6febbb9a0144ec0e1f91b8cbccc43b9152cb819855bffb83e5015"
   },
   "cover-light": {
-    "composition": "247ffeb59386c8bd7e85144b1ec71776fffe8db1709574d56b0866b8188c9236",
+    "composition": "a4f1ef6980c0643a1530f9fa02def8b3ddd3a85b0c00a80df4a990c3a5ae5e5f",
     "png": "21a3e1c8faf1a60f71f72191c2db3192aa5999ae33d7e1d25dd97de952a3592a"
   },
   "publish": {
-    "composition": "d87215353cf2fd8a2adf988bee1a04640990351947382a14e2ef19fe7c2716c9",
+    "composition": "463f35342e7153b74549613c9a8b057cce2f1f9d9259ebff113330e5aba8659f",
     "png": "8b63442cc6d7c4c477cbc7e655b3fa83c8c613ba7abde640b6556cf156afa606"
   },
   "conflicts": {
-    "composition": "b532c9ad2f6a98d1cc38dc18fb4e15e5ff21419b7c0981ac54cae498c4fe2bec",
+    "composition": "5d03fe8db47b87f4e7c0f67d19bad07583ef04c078da89487b68c1ba78988a28",
     "png": "1814034e51f4cd6e5513985b95c2edca1cf9dd0a4ab041ca89564b3ba6911d77"
   },
   "swaps": {
-    "composition": "54f1eb3e4c3b75ab4b17aba3383843d1bd37f2712839b65ff7970b9fd67f242a",
-    "png": "54dfbb3f46ccc8e1b7391b3ea57a21a684044c061225a875ddedfb26f1fe967d"
+    "composition": "fcc2626fbe7dbff5c9294ab3e526a0d41542a4b2009698528abe5f7a979dabbb",
+    "png": "23473e2d11f8179cafd696742369d5b3452d9a4d7638a7f820dce7d746f0eba5"
   },
   "cost": {
-    "composition": "89c5d187fcd743abdc20c63039fead60e3cc283e1642a2a9babe924078f1615f",
-    "png": "87e6a059d10f5b480d5e1ed090ad1c0bec4c5c6969969ae902e6a358d1862375"
+    "composition": "a44650aa4af28bb0fba50e7be304ac176ed12b574478a50574e66fb4d258fff9",
+    "png": "469cbfa63284cce290dd90902d5aae7236cf8fa8649531e75269ec035627f61a"
   }
 }
