@@ -1,7 +1,7 @@
 {
   "$schema": "https://app.clawnify.com/schema/v1/clawnify.json",
   "version": 1,
-  "name": "OpenShifts",
+  "name": "Shifts",
   "description": "Employee scheduling, time tracking, availability, time off and shift swaps for shift teams: restaurants, cafes, hotels, retail floors, care homes, warehouses and production lines. Build the week, check it against everyone's availability and the rest rule, see what it costs before you commit, and publish it. Once a week is published every change is recorded with who made it and how much notice people got, and the team reads that on the same page as the rota. Like Shiftbase, Deputy, When I Work, 7shifts, Homebase, Planday or Sling.",
   "icon": "icon.svg",
   "tags": [
@@ -72,7 +72,7 @@
     ]
   },
   "template": {
-    "displayName": "OpenShifts",
+    "displayName": "Shifts",
     "category": "Operations",
     "enabled": true
   },
