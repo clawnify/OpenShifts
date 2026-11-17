@@ -1,2 +1,8 @@
 packages:
   - .
+minimumReleaseAgeExclude:
+  - '@clawnify/app@0.4.8'
+allowBuilds:
+  esbuild: true
+  sharp: false
+  workerd: true

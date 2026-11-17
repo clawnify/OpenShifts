@@ -13,8 +13,8 @@
     "previews:export": "node scripts/build-previews.mjs export"
   },
   "dependencies": {
-    "@clawnify/app": "^0.2.1",
-    "@clawnify/db": "^0.4.1",
+    "@clawnify/app": "^0.4.8",
+    "@clawnify/db": "^0.4.3",
     "@phosphor-icons/react": "^2.1.10",
     "@radix-ui/react-dialog": "^1.1.23",
     "@radix-ui/react-label": "^2.1.15",
